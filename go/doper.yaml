@@ -1,0 +1,6 @@
+image: golang
+volumes:
+- $(pwd):/workspace
+preserveUser: true
+entrypoint: /bin/bash
+workdir: /workspace
