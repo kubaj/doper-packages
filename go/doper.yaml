@@ -1,6 +1,8 @@
 image: golang
-volumes:
-- $(pwd):/workspace
 preserveUser: true
 entrypoint: /bin/bash
-workdir: /workspace
+workdir: $(pwd)
+volumes:
+- $GOPATH:$GOPATH
+env:
+  GOPATH: $GOPATH
